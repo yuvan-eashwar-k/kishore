@@ -20,6 +20,16 @@ body {
   font-family: "Roboto", sans-serif;
   background: #f4f4f4;
   line-height: 1.4;
+  display: grid;
+  grid-template-areas: "navbar home";
+}
+
+#navbar {
+  grid-area: navbar;
+}
+
+#home {
+  grid-area: home;
 }
 
 #navbar {
@@ -41,7 +51,7 @@ body {
 
 #navbar .navbar-container .logo {
   justify-self: flex-end;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
 }
 
 #navbar .navbar-container .links {
@@ -57,18 +67,21 @@ body {
   padding: 1rem 1.5rem;
   text-align: center;
   font-size: 1.5rem;
+  border-bottom: 3px solid transparent;
+}
+
+#navbar .navbar-container .links a.current {
+  border-color: #333;
 }
 
 #navbar .navbar-container .links a:hover {
-  background: #333;
-  color: #fff;
-  border-radius: 10%;
+  border-bottom: 3px solid #333;
   transition: all 0.5s ease-in-out;
 }
 
 #navbar .navbar-container .social {
   padding: 1rem;
-  padding-bottom: 7rem;
+  padding-bottom: 5rem;
 }
 
 #navbar .navbar-container .social a {
@@ -89,4 +102,32 @@ body {
 
 #navbar .navbar-container #footer {
   justify-self: flex-end;
+}
+
+#home {
+  height: 100vh;
+  width: 80vw;
+  background: #333;
+  color: #fff;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#home h1 {
+  font-size: 4rem;
+  padding-bottom: 5rem;
+}
+
+#home a {
+  color: #333;
+  background-color: #c0c0c0;
+  padding: 1rem 2rem;
+  font-weight: bold;
+}
+
+#home a:hover {
+  background: #fff;
 }

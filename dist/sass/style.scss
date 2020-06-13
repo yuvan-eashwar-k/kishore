@@ -11,6 +11,16 @@ body {
   font-family: $font-stack;
   background: $light-color;
   line-height: 1.4;
+  display: grid;
+  grid-template-areas: "navbar home";
+}
+
+#navbar {
+  grid-area: navbar;
+}
+
+#home {
+  grid-area: home;
 }
 
 #navbar {
@@ -30,7 +40,7 @@ body {
 
     .logo {
       justify-self: flex-end;
-      padding-bottom: 5rem;
+      padding-bottom: 3rem;
     }
 
     .links {
@@ -44,39 +54,70 @@ body {
         padding: 1rem 1.5rem;
         text-align: center;
         font-size: 1.5rem;
-      }
+        border-bottom: 3px solid transparent;
 
-      a:hover {
-        background: $dark-color;
-        color: #fff;
-        border-radius: 10%;
-        transition: all 0.5s ease-in-out;
+        &.current {
+          border-color: #333;
+        }
+
+        &:hover {
+          border-bottom: 3px solid #333;
+          transition: all 0.5s ease-in-out;
+        }
       }
     }
 
     .social {
       padding: 1rem;
-      padding-bottom: 7rem;
+      padding-bottom: 5rem;
 
       a {
         padding: 1rem 2rem;
         color: $dark-color;
         text-align: center;
         display: inline;
-      }
 
-      a:hover {
-        background: $dark-color;
-        color: #fff;
-        border-radius: 10%;
-        transition: all 0.5s ease-in-out;
-        border-radius: 40%;
-        border: 2px solid $light-color;
+        &:hover {
+          background: $dark-color;
+          color: #fff;
+          border-radius: 10%;
+          transition: all 0.5s ease-in-out;
+          border-radius: 40%;
+          border: 2px solid $light-color;
+        }
       }
     }
 
     #footer {
       justify-self: flex-end;
+    }
+  }
+}
+
+#home {
+  height: 100vh;
+  width: 80vw;
+  background: #333;
+  color: #fff;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h1 {
+    font-size: 4rem;
+    padding-bottom: 5rem;
+  }
+
+  a {
+    color: #333;
+    background-color: $nav-color;
+    padding: 1rem 2rem;
+    font-weight: bold;
+
+    &:hover {
+      background: #fff;
     }
   }
 }
