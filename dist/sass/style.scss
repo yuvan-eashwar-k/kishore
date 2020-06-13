@@ -1,0 +1,82 @@
+@import "variables";
+@import "utilities";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-stack;
+  background: $light-color;
+  line-height: 1.4;
+}
+
+#navbar {
+  height: 100vh;
+  width: 20vw;
+  background: #fff;
+  position: sticky;
+
+  .navbar-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    .logo {
+      justify-self: flex-end;
+      padding-bottom: 5rem;
+    }
+
+    .links {
+      padding-bottom: 5rem;
+      li {
+        margin: 2rem 0;
+      }
+
+      a {
+        color: $dark-color;
+        padding: 1rem 1.5rem;
+        text-align: center;
+        font-size: 1.5rem;
+      }
+
+      a:hover {
+        background: $dark-color;
+        color: #fff;
+        border-radius: 10%;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+
+    .social {
+      padding: 1rem;
+      padding-bottom: 7rem;
+
+      a {
+        padding: 1rem 2rem;
+        color: $dark-color;
+        text-align: center;
+        display: inline;
+      }
+
+      a:hover {
+        background: $dark-color;
+        color: #fff;
+        border-radius: 10%;
+        transition: all 0.5s ease-in-out;
+        border-radius: 40%;
+        border: 2px solid $light-color;
+      }
+    }
+
+    #footer {
+      justify-self: flex-end;
+    }
+  }
+}
