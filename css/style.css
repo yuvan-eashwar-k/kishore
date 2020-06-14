@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
 ul {
   list-style: none;
 }
@@ -17,7 +18,7 @@ img {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   background: #f4f4f4;
   line-height: 1.4;
   display: grid;
@@ -37,6 +38,8 @@ body {
   width: 20vw;
   background: #fff;
   position: sticky;
+  top: 0;
+  left: 0;
 }
 
 #navbar .navbar-container {
@@ -130,4 +133,46 @@ body {
 
 #home a:hover {
   background: #fff;
+}
+
+#gallery {
+  max-width: 80wh;
+  margin: auto;
+}
+
+#gallery #header {
+  padding: 1.5rem;
+  text-align: center;
+  background-color: #333333;
+  color: #fff;
+  width: 80vw;
+}
+
+#gallery #header h2 {
+  border-left: 1px dotted #fff;
+  border-right: 1px dotted #fff;
+  display: inline-block;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+#gallery #image-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 2rem;
+  grid-gap: 2rem;
+}
+
+#gallery #image-container .image-item {
+  display: block;
+  width: 700px;
+  height: 700px;
+  overflow: hidden;
+  text-align: center;
+}
+
+#gallery #image-container .image-item img {
+  height: 600px;
+  width: 600px;
+  background: #f4f4f4;
 }

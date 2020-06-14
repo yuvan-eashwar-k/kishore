@@ -1,5 +1,6 @@
 @import "variables";
 @import "utilities";
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
 
 * {
   padding: 0;
@@ -28,6 +29,8 @@ body {
   width: 20vw;
   background: #fff;
   position: sticky;
+  top: 0;
+  left: 0;
 
   .navbar-container {
     height: 100%;
@@ -118,6 +121,52 @@ body {
 
     &:hover {
       background: #fff;
+    }
+  }
+}
+
+// Gallery
+
+#gallery {
+  max-width: 80wh;
+  margin: auto;
+
+  #header {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #333333;
+    color: #fff;
+    width: 80vw;
+  }
+
+  #header h2 {
+    border-left: 1px dotted #fff;
+    border-right: 1px dotted #fff;
+    display: inline-block;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  #image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+    grid-gap: 2rem;
+
+    .image-item {
+      display: block;
+      width: 700px;
+      height: 700px;
+      overflow: hidden;
+      text-align: center;
+      // box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.4),
+      //   -30px 0px 40px rgba(0, 0, 0, 0.4);
+
+      & img {
+        height: 600px;
+        width: 600px;
+        background: $light-color;
+      }
     }
   }
 }
