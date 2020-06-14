@@ -14,6 +14,7 @@ body {
   line-height: 1.4;
   display: grid;
   grid-template-areas: "navbar home";
+  overflow-x: hidden;
 }
 
 #navbar {
@@ -128,7 +129,7 @@ body {
 // Gallery
 
 #gallery {
-  max-width: 80wh;
+  max-width: 80vw;
   margin: auto;
 
   #header {
