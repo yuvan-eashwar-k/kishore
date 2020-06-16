@@ -33,6 +33,10 @@ body {
   padding: 3rem 0;
 }
 
+.m-4 {
+  margin: 4rem auto;
+}
+
 #text-center {
   text-align: center;
 }
@@ -323,6 +327,50 @@ main#main-contact {
     .contact-info {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+// About
+main#main-about {
+  max-width: 80vw;
+  text-align: center;
+  margin: auto;
+
+  #header {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #333333;
+    color: #fff;
+    width: 80vw;
+
+    & h2 {
+      border-left: 1px dotted #fff;
+      border-right: 1px dotted #fff;
+      display: inline-block;
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+  }
+}
+
+#about {
+  &-a {
+    img {
+      height: 400px;
+      width: 400px;
+      padding-bottom: 2rem;
+      border-radius: 50%;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+      line-height: 1.6;
+      padding-bottom: 2rem;
     }
   }
 }
