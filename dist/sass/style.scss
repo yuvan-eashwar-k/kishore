@@ -211,9 +211,9 @@ body {
 // Contact
 
 main#main-contact {
-  height: 100vh;
-  width: 80vw;
+  max-width: 80vw;
   text-align: center;
+  margin: auto;
 
   #header {
     padding: 1.5rem;
